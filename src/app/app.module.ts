@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//me permite hacer peticiones put get delete 
+import {HttpClientModule} from '@angular/common/http'
 
 //Rutas 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +24,8 @@ import { PortafolioItemComponent } from './pages/portafolio-item/portafolio-item
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
