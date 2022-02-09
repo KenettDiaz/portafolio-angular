@@ -5,11 +5,11 @@ import {Proyecto} from '../interfaces/proyecto.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductosService {
+export class ProyectosService {
 
 
   cargando = true;
-
+  proyectos: Proyecto[] = [];
 
   constructor(private http: HttpClient) { 
 
@@ -20,7 +20,12 @@ export class ProductosService {
     this.http.get('https://angular-html-b2535-default-rtdb.firebaseio.com/proyectos.json').
     subscribe((resp: any) =>{
         console.log(resp);
-        this.cargando = false;
+        this.proyectos = resp;
+
+          this.cargando = false;
+    
+
+        
     });
   }
 
