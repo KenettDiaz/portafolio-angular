@@ -10,5 +10,10 @@ export interface ProyectoDescripcion {
   login: string;
   registro: string;
   productos: string;
-
+  subtitulo0:string;
+  fechaCrea: Date;
+  loginTitulo:string;
+  desc_login: string;
+  listaProd:string;
+  listaTitulo:string;
 }

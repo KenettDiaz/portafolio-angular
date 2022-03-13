@@ -1,7 +1,10 @@
 <section *ngIf="proyecto">
 
+
+  <!-- [ngStyle]="{'background-image':'url(assets/img/'+ proyecto.banner +'.png )'}" -->
+
   <header
-    [ngStyle]="{'background-image':'url(assets/img/'+ proyecto.banner +'.png )'}"
+  
   class="rk-portfolio-cover  item-inside-1">
     <div class="item-inside__meta">
       <h1 class="ae-u-bolder rk-portfolio-title ">{{proyecto.proyecto}}</h1>
@@ -11,12 +14,12 @@
   <div class="ae-container-fluid">
     <div class="ae-grid ae-grid--collapse rk-portfolio-info ">
       <div class="ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left">
-        <h2 class="rk-portfolio-inner-title ">{{proyecto.subtitulo1}}</h2>
+        <h2 class="rk-portfolio-inner-title ">{{proyecto.subtitulo0}}</h2>
       </div>
       <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right rk-portfolio-details">
-        <p class="rk-portfolio-inner-client "><span class="ae-lambda">Client: </span><span class="ae-u-bolder">Agency Design Studio</span></p>
-        <p class="au-underline rk-portfolio-inner-website "><a href="#0" class="ae-kappa">www.agencydesign.com</a></p>
-        <p class="ae-kappa ae-u-bold rk-portfolio-inner-date ">12 August, 2015</p>
+        <!-- <p class="rk-portfolio-inner-client "><span class="ae-lambda">Client: </span><span class="ae-u-bolder">Agency Design Studio</span></p>
+        <p class="au-underline rk-portfolio-inner-website "><a href="#0" class="ae-kappa">www.agencydesign.com</a></p> -->
+        <p class="ae-kappa ae-u-bold rk-portfolio-inner-date ">{{proyecto.fechaCrea}}</p>
       </div>
     </div>
   </div>
@@ -28,7 +31,7 @@
        
       </div>
       <div class="ae-grid__item item-lg-6 item-lg--offset-1">
-        <img src="assets/img/{{proyecto.productos}}.png" alt="apartado de pantalla de los productos">
+        <img src="assets/img/{{proyecto.img_1}}.png" alt="apartado de pantalla de los productos">
       </div>
     </div>
     <div class="ae-grid ae-grid--collapse">
@@ -36,24 +39,34 @@
         <img src="assets/img/{{proyecto.registro}}.png " alt="Urku Portfolio">
       </div>
       <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
-        <p>{{ proyecto.desc2}}</p>
         
         <p class="ae-u-bolder">{{proyecto.subtitulo2}} </p>
+        <p>{{ proyecto.desc2}}</p>
       </div>
     </div>
 
+    <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
+      <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
+        <h4 class="ae-u-bolder">{{ proyecto.loginTitulo }}</h4>
+        <p class="ae-eta">{{proyecto.desc_login}} </p>
+       
+      </div>
+      <div class="ae-grid__item item-lg-6 item-lg--offset-1">
+        <img src="assets/img/{{proyecto.login}}.png" alt="apartado de pantalla de los productos">
+      </div>
+    </div>
     
     <div class="ae-grid ae-grid--collapse au-xs-ptp-1 au-xs-pbp-1">
       <div class="ae-grid__item item-lg-8 item-lg--offset-2">
-        <h4 class="ae-u-bolder">Full Wide Text</h4>
-        <p class="ae-eta">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="ae-eta">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+        <h4 class="ae-u-bolder">{{proyecto.listaTitulo}}</h4>
+        <p class="ae-eta">{{proyecto.listaProd}}</p>
+        <!-- <p class="ae-eta">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p> -->
       </div>
     </div>
     <div class="ae-grid ae-grid--collapse">
-      <div class="ae-grid__item item-lg--auto"><img src="assets/img/project-1.jpg" alt="Urku Portfolio"></div>
+      <div class="ae-grid__item item-lg--auto"><img src="assets/img/{{proyecto.productos}}.png" alt="Urku Portfolio"></div>
     </div>
-    <div class="ae-grid ae-grid--collapse">
+    <!-- <div class="ae-grid ae-grid--collapse">
       <div class="ae-grid__item item-lg-6"><img src="assets/img/inner-3.jpg" alt="Urku Portfolio"></div>
       <div class="ae-grid__item item-lg-5 item-lg--offset-1 au-lg-ptp-1">
         <h4 class="ae-u-bolder">Right Box Text</h4>
@@ -75,7 +88,7 @@
         </div>
       </div>
       <div class="ae-grid__item--alt item-sm--auto item-lg-3 item-lg--offset-1 item-lg--end"><img src="assets/img/inner-4.jpg" alt="Urku Portfolio"></div>
-    </div>
+    </div> -->
   </div>
   <div class="ae-container-fluid au-pt-4 au-pb-4">
     <div class="group-buttons"><a href="#0" class="au-mt-2 arrow-button arrow-button--right">Next Project<span class="arrow-cont">

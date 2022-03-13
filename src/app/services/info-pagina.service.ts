@@ -26,7 +26,7 @@ export class InfoPaginaService {
      .subscribe( (resp: InfoPagina) =>{
        this.cargada = true; 
        this.info = resp;
-       console.log( resp );
+      //  console.log( resp );
      });
   }
 
@@ -37,7 +37,7 @@ export class InfoPaginaService {
     .subscribe( (resp: any) =>{
       
       this.equipo = resp;
-      console.log( resp );
+      // console.log( resp );
     });
     
     
