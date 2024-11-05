@@ -28,6 +28,8 @@ export class InfoPaginaService {
        this.info = resp;
       //  console.log( resp );
      });
+
+   
   }
 
   private cargarEquipo(){
